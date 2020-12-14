@@ -3,8 +3,8 @@
  // Give the service worker access to Firebase Messaging.
  // Note that you can only use Firebase Messaging here. Other Firebase libraries
  // are not available in the service worker.
- importScripts('https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js');
- importScripts('https://www.gstatic.com/firebasejs/8.1.2/firebase-messaging.js');
+ importScripts('https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js');
+ importScripts('https://www.gstatic.com/firebasejs/8.2.0/firebase-messaging.js');
  // Initialize the Firebase app in the service worker by passing in
  // your app's Firebase config object.
  // https://firebase.google.com/docs/web/setup#config-object
@@ -22,7 +22,6 @@ const firebaseConfig = {
  // messages.
  const messaging = firebase.messaging();
  // [END initialize_firebase_in_sw]
- **/
 
 
 // If you would like to customize notifications that are received in the
@@ -42,3 +41,6 @@ messaging.onBackgroundMessage(function(payload) {
     notificationOptions);
 });
 // [END on_background_message]
+
+
+
